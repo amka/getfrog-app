@@ -3,9 +3,7 @@
     <div class="screenshot">
       <img
         :src="
-          $q.dark.isActive
-            ? '/public/images/frog-night.png'
-            : '/public/images/frog-day.png'
+          $q.dark.isActive ? '/images/frog-night.png' : '/images/frog-day.png'
         "
         alt="Frog app window"
       />
