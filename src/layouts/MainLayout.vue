@@ -4,7 +4,11 @@
   <q-layout view="lHh Lpr lFf">
     <q-header class="header">
       <q-toolbar :class="$q.dark.isActive ? 'text-primary' : 'text-dark'">
-        <q-toolbar-title>Get Frog</q-toolbar-title>
+        <q-toolbar-title>
+          <q-btn href="/" flat stretch>
+            Frog
+          </q-btn>
+        </q-toolbar-title>
 
         <q-btn @click="toggleDarkMode" flat round dense
           :icon="$q.dark.isActive ? 'eva-sun-outline' : 'eva-moon-outline'" class="q-mr-md">
@@ -17,7 +21,7 @@
           <q-route-tab href="#privacy" label="Privacy" />
         </q-tabs>
 
-        <q-btn color="primary" flat round icon="eva-menu-outline" class="xs">
+        <q-btn :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" flat round icon="eva-menu-outline" class="xs">
           <q-menu>
             <q-list style="min-width: 200px">
               <q-item href="#getfrog" clickable v-close-popup>
@@ -41,11 +45,12 @@
 
     <q-footer reveal class="footer">
       <div class="row justify-center">
-        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://github.com/tenderowl/frog">
-          <q-icon name="eva-github-outline" class="q-mr-xs"></q-icon>GitHub
+        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://tenderowl.com" class="q-pa-md">
+          Made by 🦉 TenderOwl
         </a>
-        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://tenderowl.com">
-          Made by TenderOwl
+        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://github.com/tenderowl/frog"
+          class="q-pa-md">
+          <q-icon name="eva-github-outline" class="q-mr-xs"></q-icon>GitHub
         </a>
       </div>
     </q-footer>
