@@ -28,26 +28,49 @@
 
       <h3 class="text-center">Features</h3>
       <div class="row">
-        <img src="~/" alt="" />
-        <h5>Extract text with screenshot tool</h5>
+        <div class="col">
+          <img src="" alt="" />
+        </div>
+        <div class="col">
+          <h5>Extract text with screenshot tool</h5>
+        </div>
       </div>
 
       <div class="row">
-        <img src="~/" alt="" />
-        <h5>Extract QR Code and barcode</h5>
+        <div class="col">
+          <h5>Extract QR Code and barcode</h5>
+        </div>
+        <div class="col">
+          <img src="" alt="" />
+        </div>
       </div>
 
       <div class="row">
-        <h5>Have an image? Use drag-n-drop to process it.</h5>
+        <div class="col">
+          <img src="" alt="" />
+        </div>
+        <div class="col">
+          <h5>Have an image? Use drag-n-drop to process it.</h5>
+        </div>
       </div>
 
       <div class="row">
-        <h5>Extract text from CLI.</h5>
+        <div class="col">
+          <h5>Extract text from CLI.</h5>
+        </div>
+        <div class="col">
+          <img src="" alt="" />
+        </div>
       </div>
 
       <h3 class="text-center">Privacy</h3>
       <div class="row">
-        <h5>Extract text with screenshot tool</h5>
+        <div class="col">
+          <img src="" alt="" />
+        </div>
+        <div class="col">
+          <h5>Frog use Portals to respect your privacy</h5>
+        </div>
       </div>
     </div>
   </q-page>
