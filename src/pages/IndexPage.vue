@@ -4,8 +4,8 @@
       <img
         :src="
           $q.dark.isActive
-            ? '/src/assets/frog-night.png'
-            : '/src/assets/frog-day.png'
+            ? '/public/images/frog-night.png'
+            : '/public/images/frog-day.png'
         "
         alt="Frog app window"
       />
