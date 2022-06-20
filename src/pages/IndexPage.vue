@@ -1,11 +1,11 @@
 <template>
-  <q-page class="row items-center justify-evenly" :padding="true">
-    <div class="col-12 text-center">
+  <q-page class="row items-center justify-center" :padding="true">
+    <div class="col-12 width-960 text-center">
       <q-img
         :src="
           $q.dark.isActive ? '/images/frog-night.png' : '/images/frog-day.png'
         "
-        fit="contain"
+        fit="scale-down"
         alt="Frog app"
       />
     </div>
@@ -82,3 +82,10 @@ import { useQuasar } from 'quasar';
 
 const $q = useQuasar();
 </script>
+
+
+<style lang="scss" scoped>
+.width-960 {
+  max-width: 960px;
+}
+</style>
