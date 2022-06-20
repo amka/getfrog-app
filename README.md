@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6dcf9f8-671a-4148-97bc-7f08cda822cc/deploy-status)](https://app.netlify.com/sites/clever-murdock-3323aa/deploys)
+
 # GetFrog.app
 
 GetFrog.app website
