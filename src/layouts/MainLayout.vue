@@ -17,11 +17,27 @@
           <q-tooltip>Toggle Dark Mode</q-tooltip>
         </q-btn>
 
-        <q-tabs v-model="tab" shrink>
-          <q-route-tab to="#getfrog" label="Get Frog" />
-          <q-route-tab to="#features" label="Features" />
-          <q-route-tab to="#privacy" label="Privacy" />
+        <q-tabs v-model="tab" shrink class="gte-sm">
+          <q-route-tab href="#getfrog" label="Get Frog" />
+          <q-route-tab href="#features" label="Features" />
+          <q-route-tab href="#privacy" label="Privacy" />
         </q-tabs>
+
+        <q-btn color="primary" flat round icon="eva-menu-outline" class="xs">
+          <q-menu>
+            <q-list style="min-width: 200px">
+              <q-item href="#getfrog" clickable v-close-popup>
+                <q-item-section>Get Frog</q-item-section>
+              </q-item>
+              <q-item href="#features" clickable v-close-popup>
+                <q-item-section>Features</q-item-section>
+              </q-item>
+              <q-item href="#privacy" clickable v-close-popup>
+                <q-item-section>Privacy</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
