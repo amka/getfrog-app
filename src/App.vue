@@ -2,10 +2,12 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { onMounted, provide } from 'vue';
 
-export default defineComponent({
-  name: 'App',
-});
+
+onMounted(() => {
+  const hasDarkPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  provide('dark', hasDarkPreference);
+})
 </script>

@@ -6,18 +6,12 @@
       <q-toolbar :class="$q.dark.isActive ? 'text-primary' : 'text-dark'">
         <q-toolbar-title>Get Frog</q-toolbar-title>
 
-        <q-btn
-          @click="toggleDarkMode"
-          flat
-          round
-          dense
-          :icon="$q.dark.isActive ? 'eva-sun-outline' : 'eva-moon-outline'"
-          class="q-mr-md"
-        >
+        <q-btn @click="toggleDarkMode" flat round dense
+          :icon="$q.dark.isActive ? 'eva-sun-outline' : 'eva-moon-outline'" class="q-mr-md">
           <q-tooltip>Toggle Dark Mode</q-tooltip>
         </q-btn>
 
-        <q-tabs v-model="tab" shrink class="gte-sm">
+        <q-tabs v-model="tab" shrink class="gt-xs">
           <q-route-tab href="#getfrog" label="Get Frog" />
           <q-route-tab href="#features" label="Features" />
           <q-route-tab href="#privacy" label="Privacy" />
@@ -47,16 +41,10 @@
 
     <q-footer reveal class="footer">
       <div class="row justify-center">
-        <a
-          :class="$q.dark.isActive ? 'text-primary' : 'text-dark'"
-          href="https://github.com/tenderowl/frog"
-        >
+        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://github.com/tenderowl/frog">
           <q-icon name="eva-github-outline" class="q-mr-xs"></q-icon>GitHub
         </a>
-        <a
-          :class="$q.dark.isActive ? 'text-primary' : 'text-dark'"
-          href="https://tenderowl.com"
-        >
+        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://tenderowl.com">
           Made by TenderOwl
         </a>
       </div>
@@ -65,11 +53,12 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, inject } from 'vue';
 import { useQuasar } from 'quasar';
 
 const $q = useQuasar();
 const tab = ref('');
+const hasDarkPreference = inject('dark');
 
 const toggleDarkMode = () => {
   $q.dark.toggle();
@@ -77,7 +66,11 @@ const toggleDarkMode = () => {
 };
 
 onMounted(() => {
-  $q.dark.set(localStorage.getItem('dark-mode') === 'true');
+  if (localStorage.getItem('dark-mode') == null && hasDarkPreference) {
+    $q.dark.set(true);
+  } else {
+    $q.dark.set(localStorage.getItem('dark-mode') === 'true');
+  }
 });
 </script>
 
