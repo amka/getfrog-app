@@ -60,7 +60,7 @@
           <q-img src="/images/privacy.jpg" fit="scale-down" width="280px" class="rounded-borders" />
         </div>
         <div class="col-12 col-sm-8 q-pa-md">
-          <h5>Frog use Portals to respect your privacy</h5>
+          <h5>Frog use Portals to respect your <a class="text-primary" href="/privacy-policy">privacy</a></h5>
           <p>We respect your privacy and don't ask you to give to Frog extra permissions.</p>
         </div>
       </div>

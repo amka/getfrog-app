@@ -16,9 +16,9 @@
         </q-btn>
 
         <q-tabs v-model="tab" shrink class="gt-xs">
-          <q-route-tab href="#getfrog" label="Get Frog" />
-          <q-route-tab href="#features" label="Features" />
-          <q-route-tab href="#privacy" label="Privacy" />
+          <q-route-tab href="/#getfrog" label="Get Frog" />
+          <q-route-tab href="/#features" label="Features" />
+          <q-route-tab href="/#privacy" label="Privacy" />
         </q-tabs>
 
         <q-btn :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" flat round icon="eva-menu-outline" class="xs">
@@ -47,6 +47,10 @@
       <div class="row justify-center">
         <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://tenderowl.com" class="q-pa-md">
           Made by 🦉 TenderOwl
+        </a>
+        <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="/privacy-policy"
+          class="q-pa-md">
+          Privacy Policy
         </a>
         <a :class="$q.dark.isActive ? 'text-primary' : 'text-dark'" href="https://github.com/tenderowl/frog"
           class="q-pa-md">
